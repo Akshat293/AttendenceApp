@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-v24/bg_bluetooth_device.xml" value="0.251" />
+        <entry key="app/src/main/res/drawable/active_button.xml" value="0.2375" />
+        <entry key="app/src/main/res/drawable/choose_button.xml" value="0.2375" />
+        <entry key="app/src/main/res/drawable/circle_gray.xml" value="0.2375" />
+        <entry key="app/src/main/res/drawable/custom_input.xml" value="0.2375" />
+        <entry key="app/src/main/res/drawable/ic_arrow___down_3.xml" value="0.2375" />
+        <entry key="app/src/main/res/drawable/ic_arrow_left.xml" value="0.2375" />
+        <entry key="app/src/main/res/drawable/inactive_button.xml" value="0.2375" />
+        <entry key="app/src/main/res/drawable/progress_bg.xml" value="0.2375" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2737430167597765" />
+        <entry key="app/src/main/res/layout/activity_main2.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_attendance.xml" value="0.2907692307692308" />
+        <entry key="app/src/main/res/layout/fragment_choose_batch.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/fragment_choose_name.xml" value="0.2907692307692308" />
+        <entry key="app/src/main/res/layout/fragment_enterphone.xml" value="0.2722222222222222" />
+        <entry key="app/src/main/res/layout/fragment_hiri.xml" value="0.2722222222222222" />
+        <entry key="app/src/main/res/layout/fragment_otp_verify.xml" value="0.2722222222222222" />
+        <entry key="app/src/main/res/layout/fragment_splash_screen.xml" value="0.2722222222222222" />
+        <entry key="app/src/main/res/layout/item_bluetooth_device.xml" value="0.30512820512820515" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
