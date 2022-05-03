@@ -29,6 +29,9 @@ private lateinit var binding: FragmentChooseNameBinding
         binding.hiri.setOnClickListener {
             view?.findNavController()?.navigate(R.id.action_chooseBatchFragment_to_hiriFragment)
         }
+        binding.back.setOnClickListener {
+            getActivity()?.finish();
+        }
         return binding.root
 
     }

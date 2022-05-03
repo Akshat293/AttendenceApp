@@ -14,6 +14,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import com.example.attendenceapp.R
 import com.example.attendenceapp.databinding.FragmentOtpVerifyBinding
@@ -21,6 +22,7 @@ import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
+import kotlinx.coroutines.launch
 import java.util.concurrent.TimeUnit
 
 class OtpVerifyFragment : Fragment() {
@@ -36,6 +38,11 @@ private lateinit var binding:FragmentOtpVerifyBinding
     ): View? {
         // Inflate the layout for this fragment
         binding=DataBindingUtil.inflate(inflater,R.layout.fragment_otp_verify,container,false)
+        lifecycleScope.launch {
+            binding.progressBar.visibility=View.VISIBLE
+            StartFirebaseLogin()
+        }
+
         binding.apply {
             inputotp1.addTextChangedListener(textWatcherOtp)
             inputotp2.addTextChangedListener(textWatcherOtp)
@@ -45,8 +52,9 @@ private lateinit var binding:FragmentOtpVerifyBinding
             inputotp6.addTextChangedListener(textWatcherOtp)
 
         }
+
+
         automove()
-        StartFirebaseLogin()
         val bundle = this.arguments
              if (bundle != null) {
 
@@ -94,6 +102,8 @@ private lateinit var binding:FragmentOtpVerifyBinding
                 super.onCodeSent(s, forceResendingToken)
                 verificationCode = s
                 Toast.makeText(requireContext(), "Code sent", Toast.LENGTH_SHORT).show()
+                binding.progressBar.visibility=View.INVISIBLE
+
             }
         }
     }
@@ -207,7 +217,12 @@ private lateinit var binding:FragmentOtpVerifyBinding
                                 inputotp5.text.toString() +  inputotp6.text
                             .toString()
                     val credential = PhoneAuthProvider.getCredential(verificationCode, otpCombined)
-                    SigninWithPhone(credential)
+                    verifyButton.setBackgroundResource(R.drawable.active_button)
+                    lifecycleScope.launch {
+                        binding.progressBar.visibility=View.VISIBLE
+                        SigninWithPhone(credential)
+                    }
+
                 }
             }
         }
@@ -216,10 +231,11 @@ private lateinit var binding:FragmentOtpVerifyBinding
         auth.signInWithCredential(credential)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
+                    binding.progressBar.visibility=View.INVISIBLE
                    view?.findNavController()?.navigate(R.id.action_otpVerifyFragment2_to_chooseBatchFragment)
-                   requireActivity().finish()
                 } else {
                     Toast.makeText(requireContext(), "Incorrect OTP", Toast.LENGTH_SHORT).show()
+                    binding.progressBar.visibility=View.INVISIBLE
                     binding.apply {
                         inputotp1.startAnimation(shakeError())
                         inputotp2.startAnimation(shakeError())

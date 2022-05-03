@@ -132,7 +132,6 @@ class BluetoothHelper(private val context: Context, private val listener: Blueto
         this.isRequiredPermission = isRequired
         return this
     }
-
     fun create(): BluetoothHelper {
         if (this.isRequiredPermission) checkBTPermissions()
         return BluetoothHelper(context, listener)

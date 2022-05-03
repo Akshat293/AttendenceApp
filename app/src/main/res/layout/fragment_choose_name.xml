@@ -9,7 +9,7 @@
     tools:context=".Fragments.ChooseNameFragment">
 
     <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/appCompatImageButton"
+        android:id="@+id/back"
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_marginStart="15dp"
@@ -29,7 +29,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatImageButton" />
+        app:layout_constraintTop_toBottomOf="@+id/back" />
 
     <ImageView
         android:layout_width="wrap_content"

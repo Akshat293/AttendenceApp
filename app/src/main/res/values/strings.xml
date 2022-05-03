@@ -13,4 +13,23 @@
     <string name="_91">+91</string>
     <string name="you_will_get_a_otp_on_this_number">you will get a otp on this number</string>
     <string name="get_otp">Get OTP</string>
+    <string-array name="Roll_Numbers">
+        <item>Roll Numbers</item>
+        <item>S20200020240</item>
+        <item>S20200020241</item>
+        <item>S20200020242</item>
+        <item>S20200020243</item>
+        <item>S20200020244</item>
+        <item>S20200020245</item>
+        <item>S20200020246</item>
+        <item>S20200020247</item>
+        <item>S20200020248</item>
+        <item>S20200020249</item>
+        <item>S20200020250</item>
+        <item>S20200020251</item>
+        <item>S20200020252</item>
+        <item>S20200020253</item>
+
+
+    </string-array>
 </resources>

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.example.attendenceapp.MainActivity2
 import com.example.attendenceapp.R
 import com.example.attendenceapp.databinding.FragmentHiriBinding
@@ -27,6 +28,10 @@ private lateinit var binding:FragmentHiriBinding
 
             val intent = Intent(activity, MainActivity2::class.java)
             startActivity(intent)
+
+        }
+        binding.back.setOnClickListener {
+            view?.findNavController()?.navigate(R.id.action_hiriFragment_to_chooseBatchFragment)
 
         }
         return binding.root

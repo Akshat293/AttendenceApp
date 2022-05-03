@@ -9,7 +9,7 @@
     tools:context=".Fragments.hiriFragment">
 
     <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/appCompatImageButton"
+        android:id="@+id/back"
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_marginStart="15dp"
@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatImageButton" />
+        app:layout_constraintTop_toBottomOf="@+id/back" />
 
     <TextView
         android:layout_marginTop="5dp"
@@ -71,19 +71,7 @@
         app:layout_constraintTop_toBottomOf="@id/fcom" />
 
 
-    <ImageButton
-        android:layout_marginBottom="30dp"
-        android:layout_marginRight="30dp"
-        android:id="@+id/navigate_to_personal_info"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:background="@drawable/circle_gray"
-        android:padding="8dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ic_right_arrow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+
 
 
 
